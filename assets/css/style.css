@@ -94,6 +94,21 @@ p { margin: 0; }
 .role { background: var(--accent); color: #fff; padding: 2px 8px; }
 .paper-links { display: inline-flex; gap: 10px; font-weight: 600; }
 
+.award { border: 1px solid var(--accent); color: var(--accent); padding: 1px 8px; }
+
+/* ===== Honors / patents / projects ===== */
+.honors { border-top: 1px solid var(--ink); }
+.honors .wrap { padding-top: clamp(56px, 8vw, 88px); padding-bottom: clamp(56px, 8vw, 88px); display: flex; flex-direction: column; gap: 48px; }
+.honors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px 56px; }
+.honors h3 { font-size: 26px; font-weight: 500; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
+.h-list { list-style: none; margin: 0; padding: 0; }
+.h-list li { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--rule); font-size: 16px; line-height: 1.55; }
+.h-year { flex: 0 0 auto; min-width: 44px; font-family: var(--serif); color: var(--accent); }
+.h-list.wide .h-year { min-width: 92px; }
+.h-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.h-meta { font-size: 13px; color: var(--muted); }
+.status.granted { color: #1f6b3a; font-weight: 600; }
+
 /* ===== News ===== */
 .news { border-top: 1px solid var(--ink); }
 .news .wrap { display: flex; flex-wrap: wrap; gap: 24px 56px; padding-top: 56px; padding-bottom: 56px; }

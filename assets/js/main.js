@@ -44,12 +44,13 @@
   function paperItem(p, lang, withRole) {
     const t = I18N[lang];
     const role = withRole && p.role ? `<span class="role">${t["role." + p.role]}</span>` : "";
+    const award = p.award ? `<span class="award">${t["award." + p.award]}</span>` : "";
     return `<li class="paper">
       <span class="paper-year">${p.year}</span>
       <div class="paper-body">
         <span class="paper-title">${esc(p.title)}</span>
         <span class="paper-meta">${authorsHTML(p.authors)} · <i>${esc(p.venue)}</i></span>
-        <span class="paper-tags"><span class="abbr">${esc(p.abbr)}</span>${role}${linksHTML(p)}</span>
+        <span class="paper-tags"><span class="abbr">${esc(p.abbr)}</span>${role}${award}${linksHTML(p)}</span>
       </div>
     </li>`;
   }
@@ -79,6 +80,15 @@
 
     const news = document.getElementById("news-list");
     if (news) news.innerHTML = NEWS.map((n) => `<p><span class="news-date">${esc(n.date)}</span>${n[lang]}</p>`).join("");
+
+    const aw = document.getElementById("awards-list");
+    if (aw) aw.innerHTML = AWARDS.map((a) => `<li><span class="h-year">${esc(a.year)}</span><span>${a[lang]}</span></li>`).join("");
+
+    const pt = document.getElementById("patents-list");
+    if (pt) pt.innerHTML = PATENTS.map((x) => `<li><span class="h-year">${esc(x.year)}</span><span class="h-body"><span>${x[lang]}</span><span class="h-meta">${esc(x.no)} · <span class="status ${x.status}">${t["patent." + x.status]}</span></span></span></li>`).join("");
+
+    const pj = document.getElementById("projects-list");
+    if (pj) pj.innerHTML = PROJECTS.map((x) => `<li><span class="h-year">${esc(x.period)}</span><span class="h-body"><span>${x[lang]}</span><span class="h-meta">${t["level." + x.level]} · ${lang === "zh" ? x.role_zh : x.role_en}</span></span></li>`).join("");
 
     const all = document.getElementById("all-papers");
     if (all) {
