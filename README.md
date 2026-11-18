@@ -10,4 +10,6 @@ Hand-built static site (HTML/CSS/JS, no build step), bilingual EN / 中文.
 
 改完提交即可，GitHub Pages 1–2 分钟自动更新。
 
+**防缓存**：改了 `data.js` / `style.css` 后，把 `index.html` 和 `publications.html` 里 `?v=20261118` 的日期改成当天日期，访问者就会立刻看到新版本。
+
 Fonts: Fraunces & Inter (SIL Open Font License, see `assets/fonts/`).
