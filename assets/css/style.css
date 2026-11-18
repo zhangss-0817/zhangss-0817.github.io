@@ -37,7 +37,8 @@ p { margin: 0; }
 /* ===== Header ===== */
 .site-header { position: sticky; top: 0; z-index: 5; background: rgba(255, 255, 255, 0.94); backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid var(--ink); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 20px; padding-bottom: 20px; }
-.brand { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--ink); }
+.brand { font-family: "Times New Roman", Times, "Liberation Serif", "Tinos", serif; font-size: 22px; font-weight: 700; color: var(--ink); }
+.brand .cn { font-weight: 400; }
 .brand .cn { font-size: 17px; color: var(--muted); margin-left: 4px; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
 .nav a { color: var(--ink); }
@@ -51,7 +52,7 @@ p { margin: 0; }
 .hero { display: flex; flex-wrap: wrap; gap: 48px 56px; align-items: flex-end; padding-top: clamp(48px, 7vw, 80px); padding-bottom: clamp(56px, 8vw, 96px); }
 .hero-text { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .kicker { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.hero h1 { font-size: clamp(64px, 10vw, 120px); line-height: 0.95; letter-spacing: -0.03em; }
+.hero h1 { font-family: "Times New Roman", Times, "Liberation Serif", "Tinos", serif; font-weight: 700; font-style: normal; font-size: clamp(64px, 10vw, 120px); line-height: 0.95; letter-spacing: -0.01em; }
 .hero h1 .dot { color: var(--accent); }
 .hero h1 .cn-name { display: block; font-size: 0.32em; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.4em; font-weight: 500; }
 .lead { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); line-height: 1.5; color: var(--ink-2); max-width: 680px; }
@@ -59,6 +60,9 @@ p { margin: 0; }
 .portrait { flex: 1 1 260px; max-width: 340px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .portrait img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .portrait figcaption { font-size: 13px; color: var(--muted); }
+.portrait address { font-style: normal; font-size: 13px; line-height: 1.65; color: var(--muted); }
+.portrait address .lab { color: var(--ink); font-weight: 600; }
+.portrait address a { color: var(--accent); }
 
 /* ===== Research ===== */
 .research { background: var(--paper-2); border-top: 1px solid var(--ink); }
