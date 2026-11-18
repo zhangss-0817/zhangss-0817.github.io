@@ -1,7 +1,3 @@
-/* ===== Fonts (self-hosted so the site loads fast in mainland China) ===== */
-@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces.woff2") format("woff2"); }
-@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces-italic.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/inter.woff2") format("woff2"); }
 
 /* ===== Tokens ===== */
 :root {
@@ -15,8 +11,8 @@
   --accent: #b4361c;
   --accent-dark: #7e2412;
   --accent-on-dark: #f08a6e;
-  --serif: "Fraunces", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
-  --sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "Times New Roman", Times, "Liberation Serif", "Tinos", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif;
+  --sans: "Times New Roman", Times, "Liberation Serif", "Tinos", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --wrap: 1240px;
   --pad: clamp(20px, 4vw, 40px);
 }
@@ -37,7 +33,7 @@ p { margin: 0; }
 /* ===== Header ===== */
 .site-header { position: sticky; top: 0; z-index: 5; background: rgba(255, 255, 255, 0.94); backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid var(--ink); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 20px; padding-bottom: 20px; }
-.brand { font-family: "Times New Roman", Times, "Liberation Serif", "Tinos", serif; font-size: 22px; font-weight: 700; color: var(--ink); }
+.brand { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--ink); }
 .brand .cn { font-weight: 400; }
 .brand .cn { font-size: 17px; color: var(--muted); margin-left: 4px; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
@@ -52,7 +48,7 @@ p { margin: 0; }
 .hero { display: flex; flex-wrap: wrap; gap: 48px 56px; align-items: flex-end; padding-top: clamp(48px, 7vw, 80px); padding-bottom: clamp(56px, 8vw, 96px); }
 .hero-text { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .kicker { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.hero h1 { font-family: "Times New Roman", Times, "Liberation Serif", "Tinos", serif; font-weight: 700; font-style: normal; font-size: clamp(64px, 10vw, 120px); line-height: 0.95; letter-spacing: -0.01em; }
+.hero h1 { font-family: var(--serif); font-weight: 700; font-style: normal; font-size: clamp(64px, 10vw, 120px); line-height: 0.95; letter-spacing: -0.01em; }
 .hero h1 .dot { color: var(--accent); }
 .hero h1 .cn-name { display: block; font-size: 0.32em; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.4em; font-weight: 500; }
 .lead { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); line-height: 1.5; color: var(--ink-2); max-width: 680px; }
